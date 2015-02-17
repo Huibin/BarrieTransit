@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F84AE7E91A89463F001A605D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F84AE7E81A89463F001A605D /* MapKit.framework */; };
+		F8623C7D1A70264700AA42AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8623C7C1A70264700AA42AA /* ViewController.swift */; };
+		F8623C7F1A702C7B00AA42AA /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8623C7E1A702C7B00AA42AA /* ScheduleViewController.swift */; };
+		F8623C811A702C8E00AA42AA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8623C801A702C8E00AA42AA /* MapViewController.swift */; };
+		F8623C831A702CA200AA42AA /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8623C821A702CA200AA42AA /* RouteViewController.swift */; };
+		F86CF7D61A76DED100B28F4A /* ScheduleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F86CF7D51A76DED100B28F4A /* ScheduleDetailViewController.swift */; };
+		F8708A371A8A652000CDFCD6 /* CustomPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8708A361A8A652000CDFCD6 /* CustomPointAnnotation.swift */; };
+		F8B293CF1A6763C30047CAA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B293CE1A6763C30047CAA6 /* AppDelegate.swift */; };
+		F8B293D41A6763C30047CAA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8B293D21A6763C30047CAA6 /* Main.storyboard */; };
+		F8B293D61A6763C30047CAA6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8B293D51A6763C30047CAA6 /* Images.xcassets */; };
+		F8B293D91A6763C30047CAA6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8B293D71A6763C30047CAA6 /* LaunchScreen.xib */; };
+		F8B293E51A6763C30047CAA6 /* BarrieTransitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B293E41A6763C30047CAA6 /* BarrieTransitTests.swift */; };
+		F8C68FD91A709A4600B0DB8B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C68FD81A709A4600B0DB8B /* libsqlite3.dylib */; };
+		F8DEBBA61A8C46B200054F12 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DEBBA51A8C46B200054F12 /* Reachability.swift */; };
+		F8DF5D321A8FF0AE00BED708 /* app.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = F8DF5D311A8FF0AE00BED708 /* app.sqlite3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F8B293DF1A6763C30047CAA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8B293C11A6763C30047CAA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8B293C81A6763C30047CAA6;
+			remoteInfo = BarrieTransit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F84AE7E81A89463F001A605D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F85D8E281A92A388008CDED9 /* BarrieTransit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BarrieTransit-Bridging-Header.h"; sourceTree = "<group>"; };
+		F8623C7C1A70264700AA42AA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F8623C7E1A702C7B00AA42AA /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		F8623C801A702C8E00AA42AA /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F8623C821A702CA200AA42AA /* RouteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
+		F86CF7D51A76DED100B28F4A /* ScheduleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleDetailViewController.swift; sourceTree = "<group>"; };
+		F8708A361A8A652000CDFCD6 /* CustomPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPointAnnotation.swift; sourceTree = "<group>"; };
+		F8B293C91A6763C30047CAA6 /* BarrieTransit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BarrieTransit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8B293CD1A6763C30047CAA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8B293CE1A6763C30047CAA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F8B293D31A6763C30047CAA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F8B293D51A6763C30047CAA6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F8B293D81A6763C30047CAA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F8B293DE1A6763C30047CAA6 /* BarrieTransitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BarrieTransitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8B293E31A6763C30047CAA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8B293E41A6763C30047CAA6 /* BarrieTransitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarrieTransitTests.swift; sourceTree = "<group>"; };
+		F8C68FD81A709A4600B0DB8B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		F8DEBBA51A8C46B200054F12 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		F8DF5D311A8FF0AE00BED708 /* app.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; name = app.sqlite3; path = Data/app.sqlite3; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F8B293C61A6763C30047CAA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F84AE7E91A89463F001A605D /* MapKit.framework in Frameworks */,
+				F8C68FD91A709A4600B0DB8B /* libsqlite3.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8B293DB1A6763C30047CAA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F817035A1A8445F0008053BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F84AE7E81A89463F001A605D /* MapKit.framework */,
+				F8C68FD81A709A4600B0DB8B /* libsqlite3.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8B293C01A6763C30047CAA6 = {
+			isa = PBXGroup;
+			children = (
+				F8B293CB1A6763C30047CAA6 /* BarrieTransit */,
+				F8B293E11A6763C30047CAA6 /* BarrieTransitTests */,
+				F8B293CA1A6763C30047CAA6 /* Products */,
+				F817035A1A8445F0008053BB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F8B293CA1A6763C30047CAA6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8B293C91A6763C30047CAA6 /* BarrieTransit.app */,
+				F8B293DE1A6763C30047CAA6 /* BarrieTransitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8B293CB1A6763C30047CAA6 /* BarrieTransit */ = {
+			isa = PBXGroup;
+			children = (
+				F8DEBBA41A8C467200054F12 /* ViewControllers */,
+				F8DEBBA31A8C465700054F12 /* Functions */,
+				F8B293CE1A6763C30047CAA6 /* AppDelegate.swift */,
+				F8B293D21A6763C30047CAA6 /* Main.storyboard */,
+				F8B293D51A6763C30047CAA6 /* Images.xcassets */,
+				F8B293D71A6763C30047CAA6 /* LaunchScreen.xib */,
+				F8B293CC1A6763C30047CAA6 /* Supporting Files */,
+			);
+			path = BarrieTransit;
+			sourceTree = "<group>";
+		};
+		F8B293CC1A6763C30047CAA6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8DF5D311A8FF0AE00BED708 /* app.sqlite3 */,
+				F8B293CD1A6763C30047CAA6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8B293E11A6763C30047CAA6 /* BarrieTransitTests */ = {
+			isa = PBXGroup;
+			children = (
+				F8B293E41A6763C30047CAA6 /* BarrieTransitTests.swift */,
+				F8B293E21A6763C30047CAA6 /* Supporting Files */,
+			);
+			path = BarrieTransitTests;
+			sourceTree = "<group>";
+		};
+		F8B293E21A6763C30047CAA6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8B293E31A6763C30047CAA6 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8DEBBA31A8C465700054F12 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				F85D8E281A92A388008CDED9 /* BarrieTransit-Bridging-Header.h */,
+				F8708A361A8A652000CDFCD6 /* CustomPointAnnotation.swift */,
+				F8DEBBA51A8C46B200054F12 /* Reachability.swift */,
+			);
+			name = Functions;
+			sourceTree = "<group>";
+		};
+		F8DEBBA41A8C467200054F12 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F8623C7C1A70264700AA42AA /* ViewController.swift */,
+				F8623C7E1A702C7B00AA42AA /* ScheduleViewController.swift */,
+				F86CF7D51A76DED100B28F4A /* ScheduleDetailViewController.swift */,
+				F8623C801A702C8E00AA42AA /* MapViewController.swift */,
+				F8623C821A702CA200AA42AA /* RouteViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F8B293C81A6763C30047CAA6 /* BarrieTransit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8B293E81A6763C30047CAA6 /* Build configuration list for PBXNativeTarget "BarrieTransit" */;
+			buildPhases = (
+				F8B293C51A6763C30047CAA6 /* Sources */,
+				F8B293C61A6763C30047CAA6 /* Frameworks */,
+				F8B293C71A6763C30047CAA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BarrieTransit;
+			productName = BarrieTransit;
+			productReference = F8B293C91A6763C30047CAA6 /* BarrieTransit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F8B293DD1A6763C30047CAA6 /* BarrieTransitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8B293EB1A6763C30047CAA6 /* Build configuration list for PBXNativeTarget "BarrieTransitTests" */;
+			buildPhases = (
+				F8B293DA1A6763C30047CAA6 /* Sources */,
+				F8B293DB1A6763C30047CAA6 /* Frameworks */,
+				F8B293DC1A6763C30047CAA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F8B293E01A6763C30047CAA6 /* PBXTargetDependency */,
+			);
+			name = BarrieTransitTests;
+			productName = BarrieTransitTests;
+			productReference = F8B293DE1A6763C30047CAA6 /* BarrieTransitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F8B293C11A6763C30047CAA6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Code Leaf";
+				TargetAttributes = {
+					F8B293C81A6763C30047CAA6 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = E3S6M9LC3X;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					F8B293DD1A6763C30047CAA6 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = E3S6M9LC3X;
+						TestTargetID = F8B293C81A6763C30047CAA6;
+					};
+				};
+			};
+			buildConfigurationList = F8B293C41A6763C30047CAA6 /* Build configuration list for PBXProject "BarrieTransit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F8B293C01A6763C30047CAA6;
+			productRefGroup = F8B293CA1A6763C30047CAA6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F8B293C81A6763C30047CAA6 /* BarrieTransit */,
+				F8B293DD1A6763C30047CAA6 /* BarrieTransitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F8B293C71A6763C30047CAA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8B293D41A6763C30047CAA6 /* Main.storyboard in Resources */,
+				F8B293D91A6763C30047CAA6 /* LaunchScreen.xib in Resources */,
+				F8B293D61A6763C30047CAA6 /* Images.xcassets in Resources */,
+				F8DF5D321A8FF0AE00BED708 /* app.sqlite3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8B293DC1A6763C30047CAA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F8B293C51A6763C30047CAA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8708A371A8A652000CDFCD6 /* CustomPointAnnotation.swift in Sources */,
+				F86CF7D61A76DED100B28F4A /* ScheduleDetailViewController.swift in Sources */,
+				F8623C7F1A702C7B00AA42AA /* ScheduleViewController.swift in Sources */,
+				F8623C7D1A70264700AA42AA /* ViewController.swift in Sources */,
+				F8B293CF1A6763C30047CAA6 /* AppDelegate.swift in Sources */,
+				F8623C831A702CA200AA42AA /* RouteViewController.swift in Sources */,
+				F8DEBBA61A8C46B200054F12 /* Reachability.swift in Sources */,
+				F8623C811A702C8E00AA42AA /* MapViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8B293DA1A6763C30047CAA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8B293E51A6763C30047CAA6 /* BarrieTransitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F8B293E01A6763C30047CAA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8B293C81A6763C30047CAA6 /* BarrieTransit */;
+			targetProxy = F8B293DF1A6763C30047CAA6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F8B293D21A6763C30047CAA6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8B293D31A6763C30047CAA6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F8B293D71A6763C30047CAA6 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8B293D81A6763C30047CAA6 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F8B293E61A6763C30047CAA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Huibin zhao (E3S6M9LC3X)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Huibin zhao (E3S6M9LC3X)";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "8ba2d5f0-08f0-48dc-bb79-a83e3c2f33bc";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F8B293E71A6763C30047CAA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Huibin zhao (E3S6M9LC3X)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Huibin zhao (E3S6M9LC3X)";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "8ba2d5f0-08f0-48dc-bb79-a83e3c2f33bc";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F8B293E91A6763C30047CAA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Huibin zhao (E3S6M9LC3X)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Huibin zhao (E3S6M9LC3X)";
+				INFOPLIST_FILE = BarrieTransit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = BarrieTransit;
+				PROVISIONING_PROFILE = "8ba2d5f0-08f0-48dc-bb79-a83e3c2f33bc";
+				SWIFT_OBJC_BRIDGING_HEADER = "BarrieTransit/BarrieTransit-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F8B293EA1A6763C30047CAA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Huibin zhao (E3S6M9LC3X)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Huibin zhao (E3S6M9LC3X)";
+				INFOPLIST_FILE = BarrieTransit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = BarrieTransit;
+				PROVISIONING_PROFILE = "8ba2d5f0-08f0-48dc-bb79-a83e3c2f33bc";
+				SWIFT_OBJC_BRIDGING_HEADER = "BarrieTransit/BarrieTransit-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		F8B293EC1A6763C30047CAA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BarrieTransitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = BarrieTransitTests;
+				PROVISIONING_PROFILE = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BarrieTransit.app/BarrieTransit";
+			};
+			name = Debug;
+		};
+		F8B293ED1A6763C30047CAA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BarrieTransitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = BarrieTransitTests;
+				PROVISIONING_PROFILE = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BarrieTransit.app/BarrieTransit";
+			};
+			name = Release;
+		};
+		F8CD5B681A8FD73D004F17D1 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Huibin zhao (E3S6M9LC3X)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Huibin zhao (E3S6M9LC3X)";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "8ba2d5f0-08f0-48dc-bb79-a83e3c2f33bc";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		F8CD5B691A8FD73D004F17D1 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Huibin zhao (E3S6M9LC3X)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Huibin zhao (E3S6M9LC3X)";
+				INFOPLIST_FILE = BarrieTransit/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = BarrieTransit;
+				PROVISIONING_PROFILE = "8ba2d5f0-08f0-48dc-bb79-a83e3c2f33bc";
+				SWIFT_OBJC_BRIDGING_HEADER = "BarrieTransit/BarrieTransit-Bridging-Header.h";
+			};
+			name = Distribution;
+		};
+		F8CD5B6A1A8FD73D004F17D1 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BarrieTransitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = BarrieTransitTests;
+				PROVISIONING_PROFILE = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BarrieTransit.app/BarrieTransit";
+			};
+			name = Distribution;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F8B293C41A6763C30047CAA6 /* Build configuration list for PBXProject "BarrieTransit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8B293E61A6763C30047CAA6 /* Debug */,
+				F8B293E71A6763C30047CAA6 /* Release */,
+				F8CD5B681A8FD73D004F17D1 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8B293E81A6763C30047CAA6 /* Build configuration list for PBXNativeTarget "BarrieTransit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8B293E91A6763C30047CAA6 /* Debug */,
+				F8B293EA1A6763C30047CAA6 /* Release */,
+				F8CD5B691A8FD73D004F17D1 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8B293EB1A6763C30047CAA6 /* Build configuration list for PBXNativeTarget "BarrieTransitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8B293EC1A6763C30047CAA6 /* Debug */,
+				F8B293ED1A6763C30047CAA6 /* Release */,
+				F8CD5B6A1A8FD73D004F17D1 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F8B293C11A6763C30047CAA6 /* Project object */;
+}

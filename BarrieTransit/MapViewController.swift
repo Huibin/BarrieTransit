@@ -25,7 +25,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     let busUrlWeekday: [String: String] = {
         return ["1A": ",4", "1B": ",7", "2A": ",10", "2B": ",13", "3A": ",16", "3B": ",19", "4A": ",22", "4B": ",23,26", "5A": ",27,30", "5B": ",33,34,37", "6A": ",40", "6B": ",43", "7A": ",46,49", "7B": ",52,55", "8A": ",58,61,64,67", "8B": ",70,73,76"]
         }()
-    let busUrlWeekend: [String: String] = {
+    let busUrlSat: [String: String] = {
+        return ["1A": ",2", "1B": ",5", "2A": ",8", "2B": ",11", "3A": ",14", "3B": ",17", "4A": ",20", "4B": ",24", "5A": ",28", "5B": ",31,35", "6A": ",38", "6B": ",41", "7A": ",44,47", "7B": ",50,53", "8A": ",56,59,62,65", "8B": ",68,71,74"]
+        }()
+    let busUrlSun: [String: String] = {
         return ["1A": ",3", "1B": ",6", "2A": ",9", "2B": ",12", "3A": ",15", "3B": ",18", "4A": ",21", "4B": ",25", "5A": ",29", "5B": ",32,36", "6A": ",39", "6B": ",42", "7A": ",45,48", "7B": ",51,54", "8A": ",57,60,63,66", "8B": ",69,72,75"]
     }()
     
@@ -51,6 +54,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     var session: NSURLSession!
     //Timer
     var getBusTimer: NSTimer!
+
+    
     
 //MARK:-
     override func viewDidLoad() {
@@ -226,8 +231,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         let components = calendar.components(.WeekdayCalendarUnit, fromDate: today)
         var weekDay = components.weekday
         switch weekDay {
-        case 1, 7:
-            return busUrlWeekend
+        case 1:
+            return busUrlSun
+        case 7:
+            return busUrlSat
         default:
             return busUrlWeekday
         }
@@ -243,12 +250,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 (data: NSData!, response: NSURLResponse!, error: NSError!) in
                 let str = NSString(data: data, encoding: NSUTF8StringEncoding)!
                 if str.isEqualToString("PlotBusLocations([]);") {
+                    self.map.removeAnnotations(self.map.annotations)
                     let controller = UIAlertController(title:"SORRY", message: "Cannot get bus location information now.", preferredStyle:.Alert)
                     let action = UIAlertAction(title: "OK", style: .Cancel, handler: nil)
                     controller.addAction(action)
                     self.presentViewController(controller, animated: true, completion: nil)
                     self.getBusTimer.invalidate()
-                    self.getBusTimer = nil
+
                 } else {
                     let busLocation = self.switchString(str)
                     self.map.removeAnnotations(self.map.annotations)
@@ -294,8 +302,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     func locationSearch() {
         getBusTimer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector:
             Selector("getCurrentLocation"), userInfo: nil, repeats: true)
-        getBusTimer.fire()
-
     }
     
 
@@ -396,6 +402,9 @@ extension MapViewController: UITableViewDelegate {
         routeSearch(busNumber)
         drawRoute()
         //get bus location
+        if let oldTimer = getBusTimer {
+            oldTimer.invalidate()
+        }
         locationSearch()
     }
 }

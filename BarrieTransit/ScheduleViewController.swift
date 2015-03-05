@@ -139,34 +139,26 @@ class ScheduleViewController: UIViewController {
             var statement:COpaquePointer = nil
             if sqlite3_prepare_v2(database, query, -1, &statement, nil) == SQLITE_OK {
                 while sqlite3_step(statement) == SQLITE_ROW {
-                    let stop = sqlite3_column_text(statement, 0)
-                    let stopNumber = String.fromCString(UnsafePointer<CChar>(stop))
+                    let busNumber = sqlite3_column_text(statement, 0)
+                    let busStr = String.fromCString(UnsafePointer<CChar>(busNumber))
                     let hour = Int(sqlite3_column_int(statement, 1))
                     let minute = Int(sqlite3_column_int(statement, 2))
                     let duration = (hour - currentHour) * 60 + minute - currentMinute
                     //append value to final result collection every loop
-                    if scheduleResult[stopNumber!] == nil {
-                        scheduleResult[stopNumber!] = []
+                    if scheduleResult[busStr!] == nil {
+                        scheduleResult[busStr!] = []
                     }
                     if duration >= 0 {
-                        scheduleResult[stopNumber!]?.append(duration)
+                        scheduleResult[busStr!]?.append(duration)
                     }
                 }
                 sqlite3_finalize(statement)
             }
+            sqlite3_close(database)
             getFirstTime()
             busTableView.reloadData()
-            //Notice when no bus for today
-            if scheduleResult.isEmpty {
-                let controller = UIAlertController(title:"Bad Luck", message: "this is no bus for today", preferredStyle:.Alert)
-                let action = UIAlertAction(title: "OK", style: .Cancel, handler: nil)
-                controller.addAction(action)
-                presentViewController(controller, animated: true, completion: nil)
-            }
-            sqlite3_close(database)
             stopTableView.hidden = true
             busTableView.hidden = false
-            
             self.view.endEditing(true)
         } else {
             inputTextFiled.becomeFirstResponder()
@@ -177,11 +169,20 @@ class ScheduleViewController: UIViewController {
     func getFirstTime() {
         minScheduleResult.removeAll(keepCapacity: true)
         for (key, value) in scheduleResult {
-            minScheduleResult[key] = value[0]
+            if !value.isEmpty {
+                minScheduleResult[key] = value[0]
+            }
+        }
+        if minScheduleResult.isEmpty {
+            //Notice when no bus for today
+            let controller = UIAlertController(title:"Bad Luck", message: "this is no bus for today", preferredStyle:.Alert)
+            let action = UIAlertAction(title: "OK", style: .Cancel, handler: nil)
+            controller.addAction(action)
+            presentViewController(controller, animated: true, completion: nil)
         }
     }
-    
-    
+
+
 //MARK: Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>43EAB2B4-D77C-405C-8A4C-A6C0B92AD022</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BarrieTransit</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>332BD821172BE701E1B27D5862C8F4CCA1F9C0BE</key>
+		<string>https://github.com/Huibin/BarrieTransit.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BarrieTransit.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>332BD821172BE701E1B27D5862C8F4CCA1F9C0BE</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Huibin/BarrieTransit.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>332BD821172BE701E1B27D5862C8F4CCA1F9C0BE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>332BD821172BE701E1B27D5862C8F4CCA1F9C0BE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BarrieTransit</string>
+		</dict>
+	</array>
+</dict>
+</plist>
